@@ -17,7 +17,6 @@ Spacetime base utilizes earth second as the base unit for all calculations.
 | Minute         | 100      | 100         |
 | Hour           | 100      | 10,000      |
 | Day            | 10       | 100,000     |
-| Week           | 10       | 1,000,000   |
 | Month          | 10       | 10,000,000  |
 | Year           | 10       | 100,000,000 |
 

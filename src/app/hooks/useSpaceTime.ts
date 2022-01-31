@@ -5,7 +5,6 @@ export interface SpaceTime {
   minutes: number;
   hours: number;
   days: number;
-  weeks: number;
   months: number;
   years: number;
   date: {
@@ -14,7 +13,6 @@ export interface SpaceTime {
     second: number;
     day: number;
     month: number;
-    week: number;
     year: number;
   };
 }
@@ -45,7 +43,7 @@ const getSpaceStartDate: () => Date = () => {
   const startDate = new Date();
   startDate.setFullYear(1961);
   startDate.setMonth(3, 12);
-  startDate.setHours(0);
+  startDate.setHours(7);
   startDate.setMinutes(0);
   startDate.setSeconds(0);
   startDate.setMilliseconds(0);
@@ -62,16 +60,14 @@ const calculateSpaceDate = (startDate: Date, date: Date) => {
   const spaceMinutes = passedSeconds / 100;
   const spaceHours = passedSeconds / 10_000;
   const spaceDays = passedSeconds / 100_000;
-  const spaceWeeks = passedSeconds / 1_000_000;
-  const spaceMonths = passedSeconds / 10_000_000;
-  const spaceYears = passedSeconds / 100_000_000;
+  const spaceMonths = passedSeconds / 1_000_000;
+  const spaceYears = passedSeconds / 100_000_00;
 
   return {
     seconds: spaceSeconds,
     minutes: spaceMinutes,
     hours: spaceHours,
     days: spaceDays,
-    weeks: spaceWeeks,
     months: spaceMonths,
     years: spaceYears,
 
@@ -81,7 +77,6 @@ const calculateSpaceDate = (startDate: Date, date: Date) => {
       second: Math.floor(spaceSeconds) % 100,
       day: (Math.floor(spaceDays) % 10) + 1,
       month: (Math.floor(spaceMonths) % 10) + 1,
-      week: (Math.floor(spaceWeeks) % 10) + 1,
       year: Math.floor(spaceYears) + 1,
     },
   };
