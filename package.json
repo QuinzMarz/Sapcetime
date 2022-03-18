@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "testing webpack with preact",
   "main": "./src/app/index.js",
+  "engines": {
+    "node": "16.13.x",
+    "npm": "8.1.x"
+  },
   "scripts": {
     "dev": "webpack-dev-server --open",
     "build": "webpack",
