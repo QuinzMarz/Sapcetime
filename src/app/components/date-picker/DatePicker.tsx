@@ -20,11 +20,22 @@ const DatePicker = ({ onChange }: DatePickerProps) => {
 const Input = styled.input`
   box-sizing: border-box;
   display: block;
-  padding: 0.5rem 1.25rem;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 0.625rem 1.25rem;
+  border: 2px solid #727681;
+  border-radius: 0.75rem;
+  background-color: transparent;
+  color: #727681;
+  font-family: inherit;
+  max-width: 230px;
+
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    filter: invert(0.8);
+  }
 
   &:focus {
-    border-color: #283593;
+    border-color: #5021af;
     outline: none;
   }
 `;

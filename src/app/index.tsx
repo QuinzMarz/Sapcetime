@@ -4,11 +4,13 @@ import { h, render } from 'preact';
 
 // app shadow root
 
-const appRoot = document.querySelector('#spacetime') as HTMLElement;
+const appRoots = document.querySelectorAll('.spacetime-widget') as NodeListOf<HTMLElement>;
 
-appRoot.attachShadow({
-  mode: 'open',
+Array.from(appRoots).forEach((appRoot: HTMLElement) => {
+  appRoot.attachShadow({
+    mode: 'open',
+  });
+  const isLight: boolean = appRoot.hasAttribute('data-light');
+  // @ts-ignore
+  render(<App isLight={isLight} container={appRoot} />, appRoot.shadowRoot);
 });
-
-// @ts-ignore
-render(<App />, appRoot.shadowRoot);

@@ -1,19 +1,23 @@
 import { h, VNode } from 'preact';
+import React from 'preact/compat';
 import { Header, MainHeading, Widget, WidgetBody } from './Calculator.styles';
 import CurrentTime from './CurrentTime';
 import SelectSpacetime from './SelectSpacetime';
 
-const Calculator = (): VNode => {
+interface CalculatorProps {
+  isLight?: boolean;
+}
+
+const Calculator: React.FC<CalculatorProps> = ({ isLight }): VNode => {
   return (
     <Widget>
       <Header>
-        <MainHeading>Spacetime Clock</MainHeading>
+        <MainHeading>Current space Time</MainHeading>
       </Header>
 
       <WidgetBody>
         <CurrentTime />
-
-        <SelectSpacetime />
+        {!isLight && <SelectSpacetime />}
       </WidgetBody>
     </Widget>
   );
