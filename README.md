@@ -12,14 +12,14 @@
 
 Spacetime base utilizes earth second as the base unit for all calculations.
 
-| Spacetime unit | Quantity | Seconds     |
-| -------------- | -------- | ----------- |
-| Second         | 1        | 1           |
-| Minute         | 100      | 100         |
-| Hour           | 100      | 10,000      |
-| Day            | 10       | 100,000     |
-| Month          | 10       | 10,000,000  |
-| Year           | 10       | 100,000,000 |
+| Spacetime unit | Quantity | Seconds   |
+| -------------- | -------- |-----------|
+| Second         | 1        | 1         |
+| Minute         | 100      | 100       |
+| Hour           | 100      | 10,000    |
+| Day            | 10       | 100,000   |
+| Month          | 10       | 1,000,000 |
+| Year           | 10       | 10,000,000 |
 
 As a begining Spacetime uses date, when first human left the Earth and went to space - 12 April 1961.
 

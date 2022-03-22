@@ -1,12 +1,12 @@
 {
   "name": "preact-webpack",
   "version": "1.0.0",
-  "description": "testing webpack with preact",
-  "main": "./src/app/index.js",
   "engines": {
     "node": "16.13.x",
     "npm": "8.1.x"
   },
+  "description": "testing webpack with preact",
+  "main": "./src/app/index.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
     "build": "webpack",

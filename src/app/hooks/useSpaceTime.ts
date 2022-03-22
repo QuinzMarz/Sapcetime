@@ -61,7 +61,7 @@ const calculateSpaceDate = (startDate: Date, date: Date) => {
   const spaceHours = passedSeconds / 10_000;
   const spaceDays = passedSeconds / 100_000;
   const spaceMonths = passedSeconds / 1_000_000;
-  const spaceYears = passedSeconds / 100_000_00;
+  const spaceYears = passedSeconds / 10_000_000;
 
   return {
     seconds: spaceSeconds,
